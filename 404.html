@@ -29,15 +29,6 @@
         header {
             font-size: 24px;
             font-weight: bold;
-            animation: move404 1s forwards;
-            white-space: nowrap;
-            overflow: hidden;
-            position: relative;
-        }
-
-        @keyframes move404 {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
         }
 
         main {
@@ -50,19 +41,27 @@
             animation: fadeIn 1s 1s forwards;
         }
 
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
         h1 {
             font-size: 80px;
             margin: 0;
+            animation: move404 1s forwards;
+        }
+
+        @keyframes move404 {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         p {
             font-size: 18px;
             margin-top: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
@@ -72,7 +71,7 @@
 
     <main>
         <h1>404</h1>
-        <p>We searched far and wide, and cannot find the file you're looking for!</p>
+        <p>Uh oh.. We searched far and wide, and cannot find the file you're looking for!</p>
     </main>
 
     <footer>© 2023 ponyhost</footer>
