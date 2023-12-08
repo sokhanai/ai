@@ -14,6 +14,8 @@
             text-align: center;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             min-height: 100vh;
         }
 
@@ -21,11 +23,21 @@
             background: #000;
             padding: 10px;
             color: #fff;
+            cursor: pointer;
         }
 
         header {
             font-size: 24px;
             font-weight: bold;
+            animation: move404 1s forwards;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes move404 {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         main {
@@ -34,6 +46,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            opacity: 0;
+            animation: fadeIn 1s 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         h1 {
@@ -49,14 +68,14 @@
 </head>
 <body>
 
-    <header>404 - Page Not Found</header>
+    <header onclick="window.location.href='index.html';">ponyhost</header>
 
     <main>
         <h1>404</h1>
-        <p>This page is nowhere to be found?</p>
+        <p>We searched far and wide, and cannot find the file you're looking for!</p>
     </main>
 
-    <footer>© 2023 PONYHOST</footer>
+    <footer>© 2023 ponyhost</footer>
 
 </body>
 </html>
