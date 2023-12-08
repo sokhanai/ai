@@ -50,7 +50,7 @@
 
         @keyframes move404 {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-60%); }
+            100% { transform: translateX(-20%); }
         }
 
         p {
@@ -58,12 +58,13 @@
             margin-top: 10px;
             white-space: nowrap;
             overflow: hidden;
+            opacity: 0;
             animation: fadeInCaption 1s 2s forwards;
         }
 
         @keyframes fadeInCaption {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% { transform: translateX(20%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
         }
 
         @keyframes fadeIn {
@@ -78,7 +79,7 @@
 
     <main>
         <h1>404</h1>
-        <p>We searched far and wide... The file you requested does not exist, or was deleted.</p>
+        <p>Uh oh! We searched far and wide and cannot find the requested file!</p>
     </main>
 
     <footer>© 2023 ponyhost</footer>
